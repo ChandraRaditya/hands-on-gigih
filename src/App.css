@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.form-button {
+   background-color: red;
+   color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: red;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
