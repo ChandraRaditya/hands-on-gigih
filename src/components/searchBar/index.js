@@ -1,3 +1,40 @@
+import './index.css';
+
+function SearchBar(props) {
+
+    return (
+        <form onSubmit={(event) => { props.handelButton(event) }}>
+            <div>
+                <input type='text' onChange={props.handelSearchInputy} />
+                <input type="submit" value="Submit" id="submitButton" />
+            </div>
+        </form>
+    )
+}
+
+export default SearchBar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from 'react';
 
 // class Search extends React.Component {
@@ -33,3 +70,4 @@
 // }
 
 // export default Search;
+

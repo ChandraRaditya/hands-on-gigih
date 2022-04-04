@@ -5,6 +5,7 @@ function Card(props) {
         <div className='card'>
             <p>{props.title}</p>
             <img src={props.image} />
+            {/* {props.image} */}
         </div>
     );
 }
