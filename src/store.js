@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import searchReducer from "./pages/search/reducer";
-// import AccountReducer from "./account-slice";
-// import accountReducer from "./account-reducer";
+// we no longer use reducer instead we use slice directly 
+// import searchReducer from "./pages/search/reducer";
+import searchReducerss from "./pages/search/slice";
 
 export default configureStore({
     reducer: {
-        search: searchReducer
+        search: searchReducerss
         // account: accountReducer
     }
     // devTools: true

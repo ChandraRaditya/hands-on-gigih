@@ -3,7 +3,9 @@ import Card from '../../components/card/index'
 import SearchBar from '../../components/searchBar';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import searchQuery from './action';
+// we no longer use searchquery in action
+// import searchQuery from './action';
+import { searchQuery } from './slice';
 
 function Search() {
     const currentSearch = useSelector((state) => state.search.value);
