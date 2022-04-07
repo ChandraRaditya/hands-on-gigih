@@ -1,13 +1,13 @@
 import './App.css';
-import Home from './pages/home/index';
-import Search from './pages/search/index';
+import Trending from './pages/trending/index';
 import { Provider } from "react-redux";
 import store from './store';
+import AppRouter from './router';
 
 function App() {
   return (
     <Provider store={store}>
-      <Search />
+      <AppRouter />
     </Provider>
   );
 }
