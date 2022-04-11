@@ -3,8 +3,6 @@ import Card from '../../components/card/index'
 import SearchBar from '../../components/searchBar';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-// we no longer use searchquery in action
-// import searchQuery from './action';
 import { searchQuery } from './slice';
 
 function Search() {
@@ -29,7 +27,6 @@ function Search() {
         a.preventDefault();
         const inputValue = a.target[0].value;
         // disini kita punya pilihan untuk mengambil query searchnya entah dari state atau langsung dari value element input
-        console.log(text)
         // await getData(text);
         await getData(inputValue);
         dispatch(searchQuery(text))
