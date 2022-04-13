@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Search from './pages/search/index';
 import Trending from './pages/trending/index';
+import './App.css';
 
 function AppRouter() {
 
@@ -23,7 +24,7 @@ function AppRouter() {
     ]
     return (
         <Router>
-            <div>
+            <div className="navigation">
                 <ul>
                     <li>
                         <Link to="/">Search</Link>
@@ -32,22 +33,21 @@ function AppRouter() {
                         <Link to="/trending">trending</Link>
                     </li>
                 </ul>
-
-                <hr />
-                <Switch>
-                    {/* <Route exact path="/">
-                        <Search />
-                    </Route>
-                    <Route path="/trending">
-                        <Trending />
-                    </Route> */}
-                    {route.map(({ path, component }, key) => {
+            </div>
+            <Switch>
+                <Route exact path="/">
+                    <Search />
+                </Route>
+                <Route path="/trending">
+                    <Trending />
+                </Route>
+                {/* {route.map(({ path, component }, key) => {
                         return (
                             <Route path={path} component={component} key={key} />
                         )
-                    })}
-                </Switch>
-            </div>
+                    })} */}
+            </Switch>
+
         </Router>
     )
 }

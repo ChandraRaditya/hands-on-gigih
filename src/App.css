@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -32,14 +36,15 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .form-button {
-   background-color: red;
-   color: white;
+  background-color: red;
+  color: white;
 }
 
 .card-container {
@@ -52,4 +57,30 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+.navigation {
+  background-color: green;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-bottom: 40px;
+}
+
+.navigation ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  color: white;
+}
+
+.navigation li {
+  margin-right: 10px;
+}
+
+.navigation Link {
+  text-decoration: none;
 }

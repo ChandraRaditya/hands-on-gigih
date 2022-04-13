@@ -1,5 +1,5 @@
 import './index.css'
-import Card from '../../components/card/index'
+import CardGif from '../../components/cardGif/index'
 import SearchBar from '../../components/searchBar';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +13,6 @@ function Search() {
 
     const handleInputSearch = (event) => {
         setText(event.target.value)
-        // console.log(event)
     }
 
     const getData = async (search) => {
@@ -37,7 +36,7 @@ function Search() {
 
     const dataImages = images.map((image) => {
         return (
-            <Card
+            <CardGif
                 key={image.id}
                 image={image.images.fixed_width.url}
                 title={image.title}
@@ -53,7 +52,9 @@ function Search() {
                 handelButton={handleButton}
                 handelSearchInput={handleInputSearch}
             />
-            {dataImages}
+            <div className='image-container'>
+                {dataImages}
+            </div>
         </div>
     );
 }

@@ -1,12 +1,22 @@
 import './index.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function SearchBar(props) {
 
     return (
         <form onSubmit={(event) => { props.handelButton(event) }}>
             <div>
-                <input type='text' onChange={props.handelSearchInput} />
-                <input type="submit" value="Submit" id="submitButton" />
+                {/* <input type='text' onChange={props.handelSearchInput} /> */}
+                <TextField
+                    id="standard-search"
+                    label="Search field"
+                    type="search"
+                    variant="standard"
+                    onChange={props.handelSearchInput}
+                />
+                {/* <input type="submit" value="Submit" id="submitButton" /> */}
+                <Button variant="contained" type="submit">Submit</Button>
             </div>
         </form>
     )

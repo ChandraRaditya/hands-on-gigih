@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Card from '../../components/card/index';
+import CardGif from '../../components/cardGif/index';
 import './index.css'
 
 function Trending() {
@@ -18,7 +18,7 @@ function Trending() {
 
     const dataImages = images.map((image) => {
         return (
-            <Card
+            <CardGif
                 key={image.id}
                 image={image.images.fixed_width.url}
                 title={image.title}
@@ -29,7 +29,9 @@ function Trending() {
     return (
         <div className='trending-container'>
             <h2>Trending Gif</h2>
-            {dataImages}
+            <div className='image-container'>
+                {dataImages}
+            </div>
         </div>
     )
 }
