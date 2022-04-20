@@ -6,7 +6,5 @@ import searchReducer from "./pages/search/slice";
 export default configureStore({
     reducer: {
         search: searchReducer
-        // account: accountReducer
     }
-    // devTools: true
 });

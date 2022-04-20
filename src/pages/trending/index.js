@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import CardGif from '../../components/cardGif/index';
+import CardGif from '../../components/cardGif/index.tsx';
 import './index.css'
 
 function Trending() {

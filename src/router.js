@@ -6,7 +6,7 @@ import {
     Link,
     useParams
 } from "react-router-dom";
-import Search from './pages/search/index';
+import Search from "./pages/search/index.tsx";
 import Trending from './pages/trending/index';
 import './App.css';
 
