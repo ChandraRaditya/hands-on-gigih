@@ -11,6 +11,7 @@ function Search() {
   const dispatch = useDispatch();
   const [images, setImage] = useState([]);
   const [text, setText] = useState("");
+  const api_key = process.env.REACT_APP_GIPHY_KEY;
 
   const handleInputSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
@@ -18,7 +19,7 @@ function Search() {
 
   const getData = async (search: string) => {
     const dataImage = await fetch(
-      `http://api.giphy.com/v1/gifs/search?q=${search}&api_key=E5GSyW5D7GHlLqU7Erm3ZmTqYuYTWUzX&limit=12`
+      `http://api.giphy.com/v1/gifs/search?q=${search}&api_key=${api_key}&limit=12`
     ).then((response) => response.json());
     setImage(dataImage.data);
   };
