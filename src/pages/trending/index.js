@@ -9,7 +9,7 @@ function Trending() {
   useEffect(() => {
     const getData = async () => {
       const dataImage = await fetch(
-        `http://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=12`
+        `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=12`
       ).then((response) => response.json());
       setImage(dataImage.data);
       console.log(dataImage.data);

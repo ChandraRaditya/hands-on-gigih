@@ -19,7 +19,7 @@ function Search() {
 
   const getData = async (search: string) => {
     const dataImage = await fetch(
-      `http://api.giphy.com/v1/gifs/search?q=${search}&api_key=${api_key}&limit=12`
+      `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${api_key}&limit=12`
     ).then((response) => response.json());
     setImage(dataImage.data);
   };
