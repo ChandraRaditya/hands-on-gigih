@@ -29,7 +29,7 @@ function Trending() {
 
   return (
     <div className="trending-container">
-      <h2>Trending Gif</h2>
+      <h2>Trending Gifs</h2>
       <div className="image-container">{dataImages}</div>
     </div>
   );
